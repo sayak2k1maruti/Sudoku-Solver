@@ -67,7 +67,7 @@ const Board = ({ grid, status, setGrid, initialGrid, setInitialGrid }) => {
                         data-col={j}
                         contentEditable={true}
                         value={grid[i - 1][j - 1] === 0 ? "" : grid[i - 1][j - 1]}
-                        className={`border  text-center text-xl border-dashed border-black w-[27px] h-[27px] sm:w-[40px] sm:h-[40px] xl:w-[50px] xl-w[50px]`}
+                        className={`border  text-center text-xl border-dashed border-black w-[27px] h-[27px] sm:w-[40px] sm:h-[40px] 2xl:w-[50px] 2xl:w[50px]`}
                         key={`r${i}c${j}`}
                         min={1}
                         max={9}
