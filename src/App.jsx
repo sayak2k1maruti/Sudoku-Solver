@@ -9,7 +9,7 @@ function App() {
 
 
   return (
-    <div className=' p-3 w-screen bg-neutral-200 flex flex-col items-center justify-center '>
+    <div className=' sm:p-3 w-min-screen bg-neutral-200 flex flex-col flex-nowrap items-center justify-center '>
       <Router>
         <Header />
         <Routes>
