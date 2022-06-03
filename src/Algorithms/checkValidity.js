@@ -3,7 +3,7 @@ function notInRow(arr, row) {
     for (let i = 0; i < 9; i++) {
         if (st.has(arr[row][i]))
             return false;
-        if (arr[row][i] != 0)
+        if (arr[row][i] !== 0)
             st.add(arr[row][i]);
     }
     return true;
@@ -13,7 +13,7 @@ function notInCol(arr, col) {
     for (let i = 0; i < 9; i++) {
         if (st.has(arr[i][col]))
             return false;
-        if (arr[i][col] != 0)
+        if (arr[i][col] !== 0)
             st.add(arr[i][col]);
     }
     return true;
@@ -25,7 +25,7 @@ function notInBox(arr, startRow, startCol) {
             let curr = arr[row + startRow][col + startCol];
             if (st.has(curr))
                 return false;
-            if (curr != 0)
+            if (curr !== 0)
                 st.add(curr);
         }
     }

@@ -1,10 +1,8 @@
 import { useState } from 'react';
-import Header from '../Components/Header';
 import Board from '../Components/Board';
 import Button from '../Components/Button';
 import { solveSudoku } from '../Algorithms/solveSuduku';
 import { isValidConfig } from '../Algorithms/checkValidity';
-import Footer from '../Components/Footer';
 
 const Main = () => {
     const N = 9;
@@ -34,7 +32,6 @@ const Main = () => {
         setGrid([...grid])
         setInitialGrid([...initialGrid])
         setStatus(false)
-        console.log(grid)
     }
 
     const deSolve = () => {
@@ -48,11 +45,9 @@ const Main = () => {
         setGrid([...grid])
         setInitialGrid([...initialGrid])
         setStatus(false)
-        console.log(grid)
     }
 
     const solve = () => {
-        console.log("Clicked")
         if (!isValidConfig(grid, N)) {
             setError("!Invalid Sudoku (may be repetation in row/column/smallgrid)")
             return
@@ -60,10 +55,6 @@ const Main = () => {
 
         seButtonStatus(false)
         if (solveSudoku(grid, 0, 0, N)) {
-            console.log("A")
-            console.log(grid)
-            console.log("B")
-            console.log(initialGrid)
             setGrid([...grid])
             setStatus(true)
             setError("")
@@ -73,7 +64,7 @@ const Main = () => {
         seButtonStatus(true)
     }
     return (
-        <>
+        <div className='flex flex-col items-center justify-center max-w-5xl backdrop-blur-sm drop-shadow-lg'>
             <p>
                 Enter the known numbers and click the Solve button .
             </p>
@@ -89,19 +80,22 @@ const Main = () => {
             <p className='text-lg'>{message}</p>
             <p className='text-lg text-rose-800'>{error}</p>
             <br />
+            <div>
+                {
+                    !status ?
+                        <Button text={"Solve"} onClick={solve} disabled={!buttonStatus} />
+                        :
+                        <Button text={"Unsolve"} onClick={deSolve} disabled={!buttonStatus} />
+                }
+                <Button text={"Reset"} onClick={resetGrid} disabled={!buttonStatus} />
 
-            {
-                !status ?
-                    <Button text={"Solve"} onClick={solve} disabled={!buttonStatus} />
-                    :
-                    <Button text={"Unsolve"} onClick={deSolve} disabled={!buttonStatus} />
-            }
-            <Button text={"Reset"} onClick={resetGrid} disabled={!buttonStatus} />
+            </div>
+
             <br /><br /><br />
             <p className='p-2 text-lg'>
                 If there is more than one solution, only one solution will be shown. The Unsolve button removes the answers so the input can be changed. The Reset button sets the board to its initial state. Sudokuspoiler will remember your changes to the board, so you can close the browser and continue a next time.
             </p>
-        </>
+        </div>
     )
 }
 

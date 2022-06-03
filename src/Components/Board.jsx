@@ -1,7 +1,7 @@
 const Board = ({ grid, status, setGrid, initialGrid, setInitialGrid }) => {
 
     const handleChange = (event) => {
-        const val = event.target.value - '0'
+        let val = event.target.value - '0'
         if (val < 1) val = 1
         if (val > 9) val = 9
         const row = event.target.dataset.row - '0'
@@ -82,9 +82,9 @@ const Board = ({ grid, status, setGrid, initialGrid, setInitialGrid }) => {
     const board = drawBoard()
 
     return (
-        <>
+        <div className="p-2">
             {board}
-        </>
+        </div>
     )
 }
 
