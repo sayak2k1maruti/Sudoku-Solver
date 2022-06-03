@@ -1,10 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     return (
         <header className='w-full'>
             <div className='w-full flex  align-center items-center justify-center p-3'>
-                <h1 className='flex text-3xl font-bold'>Soduku Solver</h1>
+                <h1 className='flex text-3xl font-bold'>
+                    <Link to='/'>Soduku Solver</Link>
+                </h1>
             </div>
         </header>
     )

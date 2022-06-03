@@ -1,4 +1,4 @@
-const Board = ({ grid, setGrid }) => {
+const Board = ({ grid, status, setGrid, initialGrid, setInitialGrid }) => {
 
     const handleChange = (event) => {
         const val = event.target.value - '0'
@@ -7,7 +7,9 @@ const Board = ({ grid, setGrid }) => {
         const row = event.target.dataset.row - '0'
         const col = event.target.dataset.col - '0'
         grid[row - 1][col - 1] = val
+        initialGrid[row - 1][col - 1] = val
         setGrid([...grid])
+        setInitialGrid([...initialGrid])
         console.log(grid)
     }
     const drawBoard = () => {
@@ -50,11 +52,18 @@ const Board = ({ grid, setGrid }) => {
                         borderRightWidth: '2px'
                     }
                 }
+                if (status && (initialGrid[i - 1][j - 1] === 0)) {
+                    style = {
+                        ...style,
+                        color: 'blue'
+                    }
+                }
                 board.push(
                     <input type="number"
                         style={style}
                         name={`r${i}c${j}`}
                         data-row={i}
+                        disabled={status}
                         data-col={j}
                         contentEditable={true}
                         value={grid[i - 1][j - 1] === 0 ? "" : grid[i - 1][j - 1]}
