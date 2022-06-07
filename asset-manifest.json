@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.972176c6.css",
-    "main.js": "/static/js/main.7cdd0e61.js",
-    "static/js/787.76b0e4b9.chunk.js": "/static/js/787.76b0e4b9.chunk.js",
-    "index.html": "/index.html",
-    "main.972176c6.css.map": "/static/css/main.972176c6.css.map",
-    "main.7cdd0e61.js.map": "/static/js/main.7cdd0e61.js.map",
-    "787.76b0e4b9.chunk.js.map": "/static/js/787.76b0e4b9.chunk.js.map"
+    "main.css": "/Sudoku-Solver/static/css/main.972176c6.css",
+    "main.js": "/Sudoku-Solver/static/js/main.11c2acd2.js",
+    "static/js/787.76b0e4b9.chunk.js": "/Sudoku-Solver/static/js/787.76b0e4b9.chunk.js",
+    "index.html": "/Sudoku-Solver/index.html",
+    "main.972176c6.css.map": "/Sudoku-Solver/static/css/main.972176c6.css.map",
+    "main.11c2acd2.js.map": "/Sudoku-Solver/static/js/main.11c2acd2.js.map",
+    "787.76b0e4b9.chunk.js.map": "/Sudoku-Solver/static/js/787.76b0e4b9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.972176c6.css",
-    "static/js/main.7cdd0e61.js"
+    "static/js/main.11c2acd2.js"
   ]
 }
