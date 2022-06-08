@@ -6,7 +6,7 @@ const Header = () => {
         <header className='w-full'>
             <div className='w-full flex  align-center items-center justify-center p-3'>
                 <h1 className='flex text-3xl font-bold'>
-                    <Link to='/'>Soduku Solver</Link>
+                    <Link to='/Sudoku-Solver'>Soduku Solver</Link>
                 </h1>
             </div>
         </header>

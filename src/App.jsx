@@ -13,8 +13,8 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path='/' element={<Main />}></Route>
-          <Route path='/privacypolicy' element={<PrivacyPolicy />}></Route>
+          <Route path='/Sudoku-Solver/' element={<Main />}></Route>
+          <Route path='/Sudoku-Solver/privacypolicy' element={<PrivacyPolicy />}></Route>
         </Routes>
         <Footer />
       </Router>

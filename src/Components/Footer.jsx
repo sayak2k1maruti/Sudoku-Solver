@@ -9,7 +9,7 @@ const Footer = () => {
             </p>
             <br />
             <p className='text-right text-xl p-5 text-neutral-500 hover:text-neutral-800'>
-                <Link to='/privacypolicy'>Privacy Policy</Link>
+                <Link to='/Sudoku-Solver/privacypolicy'>Privacy Policy</Link>
             </p>
 
         </footer>
